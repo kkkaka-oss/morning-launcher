@@ -29,6 +29,10 @@ def run_scheduler():
     print(f"时区: {TIMEZONE}")
     print("-" * 30)
     
+    # 启动时立即发送一次（测试用）
+    print("启动时发送一次测试消息...")
+    job()
+    
     # 设置每天定时任务
     schedule.every().day.at(PUSH_TIME).do(job)
     
