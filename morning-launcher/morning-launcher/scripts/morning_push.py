@@ -2,12 +2,8 @@
 晨间工作启动器 - 主推送脚本
 整合天气、穿搭、日历，生成并推送晨间概览
 """
-import sys
 import os
 from datetime import datetime
-
-# 添加穿搭助手路径
-sys.path.insert(0, '/mnt/skills/user/daily-outfit-assistant/scripts')
 
 from config import CITY
 from feishu_calendar import (
@@ -15,8 +11,6 @@ from feishu_calendar import (
     get_mock_today_events, get_mock_tomorrow_events,
     format_events_text
 )
-
-# 从穿搭助手导入
 from weather import get_weather, get_mock_weather, get_weather_suggestion
 from feishu_bot import send_rich_card, upload_image, get_access_token
 
