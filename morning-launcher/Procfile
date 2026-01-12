@@ -1,2 +1,0 @@
-worker: cd morning-launcher/scripts && python scheduler.py
-
