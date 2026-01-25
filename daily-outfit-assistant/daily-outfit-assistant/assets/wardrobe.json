@@ -1,0 +1,228 @@
+{
+  "tops": [
+    {
+      "id": "T01",
+      "name": "堆领修身打底衫",
+      "color": "浅蓝色",
+      "style": ["优雅", "气质"],
+      "season": ["春", "秋"],
+      "warmth": 2,
+      "prompt": "light blue cowl neck fitted long-sleeve top"
+    },
+    {
+      "id": "T02",
+      "name": "粗针V领开衫",
+      "color": "米白色",
+      "style": ["慵懒", "甜美"],
+      "season": ["秋", "冬"],
+      "warmth": 3,
+      "prompt": "cream white chunky knit V-neck cardigan with buttons"
+    },
+    {
+      "id": "T03",
+      "name": "宽松圆领毛衣",
+      "color": "燕麦色",
+      "style": ["慵懒", "休闲"],
+      "season": ["秋", "冬"],
+      "warmth": 3,
+      "prompt": "oatmeal oversized soft round-neck sweater"
+    },
+    {
+      "id": "T04",
+      "name": "一字领慵懒毛衣",
+      "color": "米白色",
+      "style": ["优雅", "慵懒"],
+      "season": ["秋", "冬"],
+      "warmth": 3,
+      "prompt": "off-white off-shoulder slouchy knit sweater"
+    },
+    {
+      "id": "T05",
+      "name": "高领羊绒毛衣",
+      "color": "焦糖色",
+      "style": ["温柔", "气质"],
+      "season": ["秋", "冬"],
+      "warmth": 4,
+      "prompt": "caramel brown turtleneck cashmere sweater"
+    },
+    {
+      "id": "T06",
+      "name": "蕾丝边打底衫",
+      "color": "奶白色",
+      "style": ["甜美", "可爱"],
+      "season": ["春", "夏"],
+      "warmth": 1,
+      "prompt": "cream white lace trim blouse with puff sleeves"
+    }
+  ],
+  "outerwear": [
+    {
+      "id": "O01",
+      "name": "高领羽绒服",
+      "color": "薄荷绿",
+      "style": ["可爱", "保暖"],
+      "season": ["冬"],
+      "warmth": 5,
+      "prompt": "mint green puffy high-collar down jacket"
+    },
+    {
+      "id": "O02",
+      "name": "条纹针织开衫",
+      "color": "米黑条纹",
+      "style": ["休闲", "时髦"],
+      "season": ["春", "秋"],
+      "warmth": 2,
+      "prompt": "beige and black striped knit cardigan"
+    },
+    {
+      "id": "O03",
+      "name": "香芋紫毛绒大衣",
+      "color": "香芋紫",
+      "style": ["温柔", "甜美"],
+      "season": ["秋", "冬"],
+      "warmth": 4,
+      "prompt": "taro purple fluffy wool coat"
+    },
+    {
+      "id": "O04",
+      "name": "驼色双排扣大衣",
+      "color": "驼色",
+      "style": ["气质", "通勤"],
+      "season": ["秋", "冬"],
+      "warmth": 4,
+      "prompt": "camel double-breasted wool coat"
+    }
+  ],
+  "dresses": [
+    {
+      "id": "D01",
+      "name": "V领针织长裙",
+      "color": "奶油白",
+      "style": ["温柔", "优雅"],
+      "season": ["春", "秋"],
+      "warmth": 2,
+      "prompt": "cream white V-neck ribbed knit midi dress with long sleeves"
+    },
+    {
+      "id": "D02",
+      "name": "碎花连衣裙",
+      "color": "浅粉色",
+      "style": ["甜美", "可爱"],
+      "season": ["春", "夏"],
+      "warmth": 1,
+      "prompt": "light pink floral print midi dress with puff sleeves"
+    }
+  ],
+  "bottoms": [
+    {
+      "id": "B01",
+      "name": "丝绒百褶长裙",
+      "color": "咖啡色",
+      "style": ["复古", "优雅"],
+      "season": ["秋", "冬"],
+      "warmth": 2,
+      "prompt": "coffee brown velvet pleated maxi skirt"
+    },
+    {
+      "id": "B02",
+      "name": "百褶短裙",
+      "color": "黑色",
+      "style": ["甜酷", "百搭"],
+      "season": ["春", "秋", "夏"],
+      "warmth": 1,
+      "prompt": "black pleated mini skirt with leather belt"
+    },
+    {
+      "id": "B03",
+      "name": "针织开叉半裙",
+      "color": "深灰色",
+      "style": ["通勤", "简约"],
+      "season": ["秋", "冬"],
+      "warmth": 2,
+      "prompt": "dark gray knit midi skirt with front slit"
+    },
+    {
+      "id": "B04",
+      "name": "V口显瘦长筒裤",
+      "color": "黑色",
+      "style": ["显瘦", "百搭"],
+      "season": ["秋", "冬"],
+      "warmth": 3,
+      "prompt": "black V-waist slim straight-leg pants"
+    },
+    {
+      "id": "B05",
+      "name": "高腰阔腿牛仔裤",
+      "color": "浅蓝色",
+      "style": ["休闲", "时髦"],
+      "season": ["春", "秋"],
+      "warmth": 2,
+      "prompt": "light blue high-waist wide-leg jeans"
+    },
+    {
+      "id": "B06",
+      "name": "V领修身针织长裙",
+      "color": "浅粉色",
+      "style": ["温柔", "优雅"],
+      "season": ["春", "秋"],
+      "warmth": 2,
+      "prompt": "light pink V-neck slim knit maxi skirt"
+    }
+  ],
+  "shoes": [
+    {
+      "id": "SH01",
+      "name": "毛毛勃肯鞋",
+      "color": "卡其色",
+      "style": ["慵懒", "可爱"],
+      "season": ["秋", "冬"],
+      "warmth": 3,
+      "prompt": "khaki fluffy Birkenstock sandals"
+    },
+    {
+      "id": "SH02",
+      "name": "复古玛丽珍鞋",
+      "color": "深棕色",
+      "style": ["复古", "优雅"],
+      "season": ["春", "秋"],
+      "warmth": 2,
+      "prompt": "dark brown vintage Mary Jane shoes"
+    },
+    {
+      "id": "SH03",
+      "name": "白色厚底小皮鞋",
+      "color": "白色",
+      "style": ["学院", "百搭"],
+      "season": ["春", "秋"],
+      "warmth": 2,
+      "prompt": "white platform leather loafers"
+    },
+    {
+      "id": "SH04",
+      "name": "切尔西短靴",
+      "color": "黑色",
+      "style": ["帅气", "百搭"],
+      "season": ["秋", "冬"],
+      "warmth": 3,
+      "prompt": "black leather Chelsea ankle boots"
+    },
+    {
+      "id": "SH05",
+      "name": "毛绒雪地靴",
+      "color": "米白色",
+      "style": ["保暖", "可爱"],
+      "season": ["冬"],
+      "warmth": 5,
+      "prompt": "cream white fluffy snow boots"
+    },
+    {
+      "id": "SH06",
+      "name": "尖头高跟鞋",
+      "color": "裸粉色",
+      "style": ["优雅", "气质"],
+      "season": ["春", "夏", "秋"],
+      "warmth": 1,
+      "prompt": "nude pink pointed-toe high heels"
+    }
+  ]
+}
