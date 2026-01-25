@@ -1,0 +1,2 @@
+web: cd daily-outfit-assistant/scripts && gunicorn webhook_server:app --bind 0.0.0.0:$PORT
+
