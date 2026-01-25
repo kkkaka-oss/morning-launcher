@@ -4,9 +4,8 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "cd daily-outfit-assistant/scripts && gunicorn webhook_server:app --bind 0.0.0.0:$PORT",
+    "startCommand": "cd scripts && gunicorn webhook_server:app --bind 0.0.0.0:$PORT",
     "healthcheckPath": "/health",
     "healthcheckTimeout": 30
   }
 }
-
