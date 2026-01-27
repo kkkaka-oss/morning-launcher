@@ -1,14 +1,13 @@
 """
 飞书机器人消息发送模块
 """
-import os
 import requests
 import json
 
 # ========== 配置区域 ==========
-APP_ID = os.environ.get("FEISHU_APP_ID", "cli_a9e7b6aaf7381bd7")
-APP_SECRET = os.environ.get("FEISHU_APP_SECRET", "zq9NLh2vroEGz4DcnLVEqdM3fH60GIeU")
-OPEN_ID = os.environ.get("FEISHU_OPEN_ID", "ou_bf952c0557f9866f8228b6f837aa2329")
+APP_ID = "cli_a9e7b6aaf7381bd7"
+APP_SECRET = "zq9NLh2vroEGz4DcnLVEqdM3fH60GIeU"
+OPEN_ID = "ou_bf952c0557f9866f8228b6f837aa2329"
 # ==============================
 
 def get_access_token():

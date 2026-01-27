@@ -4,13 +4,21 @@
 部署到 Railway
 """
 import os
+import sys
 import json
 import hashlib
 import threading
 from flask import Flask, request, jsonify
-from feishu_bot import send_text_message
-from daily_outfit import generate_outfit_recommendation, send_outfit_to_feishu
-from weather import get_weather, get_mock_weather
+
+# 支持本地运行和模块化导入
+try:
+    from scripts.feishu_bot import send_text_message
+    from scripts.daily_outfit import generate_outfit_recommendation, send_outfit_to_feishu
+    from scripts.weather import get_weather, get_mock_weather
+except ImportError:
+    from feishu_bot import send_text_message
+    from daily_outfit import generate_outfit_recommendation, send_outfit_to_feishu
+    from weather import get_weather, get_mock_weather
 
 app = Flask(__name__)
 
@@ -99,9 +107,9 @@ def webhook():
             print(f"收到消息: {text}")
             
             # 判断是否是穿搭请求
-            trigger_keywords = ["穿搭", "穿什么", "搭配", "今天穿", "推荐", "可爱", "优雅", "帅气", "温柔", "休闲", "生成"]
+            trigger_keywords = ["穿搭", "穿什么", "搭配", "今天穿", "推荐", "可爱", "优雅", "帅气", "温柔", "休闲", "生成", "穿"]
             
-            if any(kw in text for kw in trigger_keywords) or text:
+            if any(kw in text for kw in trigger_keywords):
                 # 先回复确认消息
                 send_text_message("💕 收到啦！正在挑选今日穿搭，等我一下哒...")
                 

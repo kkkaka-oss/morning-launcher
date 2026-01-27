@@ -1,9 +1,0 @@
-[phases.setup]
-nixPkgs = ["python311"]
-
-[phases.install]
-cmds = ["pip install -r requirements.txt"]
-
-[start]
-cmd = "cd scripts && gunicorn webhook_server:app --bind 0.0.0.0:$PORT"
-

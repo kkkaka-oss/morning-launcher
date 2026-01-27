@@ -8,9 +8,16 @@ import io
 import json
 import random
 from pathlib import Path
-from weather import get_weather, get_mock_weather, get_weather_suggestion
-from feishu_bot import send_text_message, send_outfit_card, upload_image, send_image_message
-from gemini_image import generate_outfit_image
+
+# 支持本地运行和模块化导入
+try:
+    from scripts.weather import get_weather, get_mock_weather, get_weather_suggestion
+    from scripts.feishu_bot import send_text_message, send_outfit_card, upload_image, send_image_message
+    from scripts.gemini_image import generate_outfit_image
+except ImportError:
+    from weather import get_weather, get_mock_weather, get_weather_suggestion
+    from feishu_bot import send_text_message, send_outfit_card, upload_image, send_image_message
+    from gemini_image import generate_outfit_image
 
 # 设置输出编码为 UTF-8
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')

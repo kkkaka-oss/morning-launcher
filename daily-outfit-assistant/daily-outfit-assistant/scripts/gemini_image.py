@@ -2,13 +2,14 @@
 Gemini 图片生成模块
 使用 Gemini 3 Pro Image (Nano Banana Pro) 生成穿搭图片
 """
-import os
+import sys
+import io
 import requests
 import base64
 from pathlib import Path
 
 # ========== 配置区域 ==========
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyCRX1RgNF3ZcXyEg_xS3IlewDE0kHAYFQA")
+GEMINI_API_KEY = "AIzaSyCRX1RgNF3ZcXyEg_xS3IlewDE0kHAYFQA"
 GEMINI_MODEL = "gemini-3-pro-image-preview"  # Nano Banana Pro
 # ==============================
 

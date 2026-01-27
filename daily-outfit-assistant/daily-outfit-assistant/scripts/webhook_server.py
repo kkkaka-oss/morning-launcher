@@ -1,21 +1,30 @@
 """
 飞书 Webhook 服务
 接收飞书消息事件，支持交互式穿搭推荐
-部署到 Railway
 """
-import os
+import sys
+import io
 import json
 import hashlib
 import threading
 from flask import Flask, request, jsonify
-from feishu_bot import send_text_message
+from feishu_bot import send_text_message, get_access_token, APP_ID, APP_SECRET
 from daily_outfit import generate_outfit_recommendation, send_outfit_to_feishu
 from weather import get_weather, get_mock_weather
+
+# 设置输出编码
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 app = Flask(__name__)
 
 # 用于去重的消息ID缓存
 processed_messages = set()
+
+def verify_signature(timestamp, nonce, encrypt_key, signature, body):
+    """验证飞书请求签名"""
+    content = timestamp + nonce + encrypt_key + body
+    sha256 = hashlib.sha256(content.encode('utf-8')).hexdigest()
+    return sha256 == signature
 
 def process_message_async(message_content, chat_id, message_id):
     """异步处理消息"""
@@ -48,8 +57,6 @@ def process_message_async(message_content, chat_id, message_id):
         
     except Exception as e:
         print(f"处理消息失败: {e}")
-        import traceback
-        traceback.print_exc()
         send_text_message(f"抱歉，生成穿搭时出错了：{str(e)}")
 
 @app.route('/webhook', methods=['POST'])
@@ -99,7 +106,7 @@ def webhook():
             print(f"收到消息: {text}")
             
             # 判断是否是穿搭请求
-            trigger_keywords = ["穿搭", "穿什么", "搭配", "今天穿", "推荐", "可爱", "优雅", "帅气", "温柔", "休闲", "生成"]
+            trigger_keywords = ["穿搭", "穿什么", "搭配", "今天穿", "推荐", "可爱", "优雅", "帅气", "温柔", "休闲"]
             
             if any(kw in text for kw in trigger_keywords) or text:
                 # 先回复确认消息
@@ -134,6 +141,15 @@ def index():
     """
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    print(f"服务启动在端口 {port}")
-    app.run(host='0.0.0.0', port=port, debug=False)
+    print("=" * 50)
+    print("🎀 穿搭小助手 Webhook 服务启动")
+    print("=" * 50)
+    print("\n请先启动 ngrok 内网穿透:")
+    print("  ngrok http 5000")
+    print("\n然后在飞书应用后台配置:")
+    print("  事件订阅 URL: https://xxx.ngrok-free.app/webhook")
+    print("  订阅事件: im.message.receive_v1")
+    print("\n" + "=" * 50)
+    
+    app.run(host='0.0.0.0', port=5000, debug=False)
+
